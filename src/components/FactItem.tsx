@@ -6,7 +6,7 @@ interface FactItemProps {
   onRemove: (fact: string) => void;
 }
 
-const FactItem: React.FC<FactItemProps> = (props) => {
+const FactItem = (props: FactItemProps) => {
   const { fact, onRemove } = props;
 
   const handleRemoveClick = () => {
@@ -15,12 +15,10 @@ const FactItem: React.FC<FactItemProps> = (props) => {
 
   return (
     <div className="fact-item-container">
-      <div className="fact-item">
-        <div className="fact-text">{fact}</div>
-        <button className="remove-button" onClick={handleRemoveClick}>
-          Remove
-        </button>
-      </div>
+      <div className="fact-text">{fact}</div>
+      <button className="remove-button" onClick={handleRemoveClick}>
+        Remove
+      </button>
     </div>
   );
 };
