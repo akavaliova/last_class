@@ -14,11 +14,13 @@ const FactItem: React.FC<FactItemProps> = (props) => {
   };
 
   return (
-    <div className="fact-item">
-      <div className="fact-text">{fact}</div>
-      <button className="remove-button" onClick={handleRemoveClick}>
-        Remove
-      </button>
+    <div className="fact-item-container">
+      <div className="fact-item">
+        <div className="fact-text">{fact}</div>
+        <button className="remove-button" onClick={handleRemoveClick}>
+          Remove
+        </button>
+      </div>
     </div>
   );
 };
